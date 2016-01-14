@@ -276,11 +276,8 @@ since your last frag."
   (when (processp quake/current-sound-process)
     (ignore-errors (kill-process quake/current-sound-process)))
   (setq quake/current-sound-process
-        (start-process "quake/sound" "testyoutput" (executable-find "emacs")
-                       "-nw" "-q" "-batch" "-eval"
-                       (format "(play-sound-file %s %f)"
-                               (concat "\"" quake/sound-directory sound-file "\"")
-                               quake/volume))))
+        (start-process "quake/sound" "testyoutput" "play"
+                       (concat quake/sound-directory sound-file))))
 
 
 
