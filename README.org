@@ -16,6 +16,9 @@ Add the following to your `.emacs` file to enable the use of `quake-mode`:
 The above assumes that you saved the project files in a folder `quake-mode`, inside
 the `.emacs.d` directory.
 
+In order to play audio, you'll need to install the =sox= package, which provides
+the command =play=.
+
 ** Usage:
    Use
     #+BEGIN_SRC
